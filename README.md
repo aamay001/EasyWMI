@@ -8,6 +8,7 @@ Supported Alias(es) can be found here:
 ## Easy Syntax
 
 ```c#
+
 // Request WMI data from a remote machine.
 WMIProcessor wmi = new WMIProcessor();
 wmi.Request = WMI_ALIAS.CPU;
@@ -19,4 +20,13 @@ String result = wmi.ExecuteRequest();
 // Change RemoteExecute to false. Executes query on local machine.
 wmi.RemoteExecute = false;
 String result = wmi.ExecuteRequest();
+
+// Shorthand Remote 
+WMIProcessor wmi = new WMIProcessor("10.1.2.8", WMI_ALIAS.CPU, "name,threadcount,architecture", true);
+String result = wmi.ExecuteRequest();
+
+// Shorthand Local
+WMIProcessor wmi = new WMIProcessor(WMI_ALIAS.CPU, "name,threadcount,architecture");
+String result = wmi.ExecuteRequest();
+
 ```
