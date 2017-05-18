@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# EasyWMI
 
-You can use the [editor on GitHub](https://github.com/aamay001/EasyWMI/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+EasyWMI is a C# Class Library that interfaces with Windows Management Instrumentation (WMI). The intended purpose for this class library is to provide an easy method to query WMI via C#. The [WMIProcessor](https://github.com/aamay001/EasyWMI/blob/master/EasyWMI/EasyWMI/WMIProcessor.cs) class uses a [Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process(v=vs.110).aspx) object to execute the request. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Supported Alias(es) can be found here:
+- [Useful WMIC Queries](https://blogs.technet.microsoft.com/askperf/2012/02/17/useful-wmic-queries/)
 
-### Markdown
+## Easy Syntax
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```c#
 
-```markdown
-Syntax highlighted code block
+// Request WMI data from a remote machine.
+WMIProcessor wmi = new WMIProcessor();
+wmi.Request = WMI_ALIAS.CPU;
+wmi.Filter = "name,threadcount,architecture";
+wmi.RemoteExecute = true;
+wmi.NodeName = "10.1.2.8";
+String result = wmi.ExecuteRequest();
 
-# Header 1
-## Header 2
-### Header 3
+// Change RemoteExecute to false. Executes query on local machine.
+wmi.RemoteExecute = false;
+String result = wmi.ExecuteRequest();
 
-- Bulleted
-- List
+// Shorthand Remote 
+WMIProcessor wmi = new WMIProcessor("10.1.2.8", WMI_ALIAS.CPU, "name,threadcount,architecture", true);
+String result = wmi.ExecuteRequest();
 
-1. Numbered
-2. List
+// Shorthand Local
+WMIProcessor wmi = new WMIProcessor(WMI_ALIAS.CPU, "name,threadcount,architecture");
+String result = wmi.ExecuteRequest();
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aamay001/EasyWMI/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<span stye="color:red; font-weight:bold;">Filter is optional for all cases.</span>

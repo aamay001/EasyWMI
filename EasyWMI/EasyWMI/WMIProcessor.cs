@@ -25,7 +25,7 @@ namespace EasyWMI
         #region Properties
 
         /// <summary>
-        /// Remote host name or IP of device to query. Only used when _processRemotely if true.
+        /// Remote host name or IP of device to query. Only used when _processRemotely is true.
         /// </summary>
         public String NodeName
         {
