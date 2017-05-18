@@ -3,3 +3,10 @@
 ################################################################################
 
 /EasyWMI/EasyWMIDemo/obj/Debug
+/EasyWMI/obj/Debug
+/EasyWMITest/obj/Debug
+/EasyWMI/.vs/EasyWMI/v14
+/EasyWMI/bin/Debug
+/EasyWMI/EasyWMIDemo/bin/Debug
+/EasyWMITest/bin/Debug
+/EasyWMI/EasyWMI.csproj.user
