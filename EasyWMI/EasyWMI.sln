@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWMI", "EasyWMI.csproj", "{AB144993-0032-4F12-9285-82DBD4C558EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWMITest", "..\EasyWMITest\EasyWMITest.csproj", "{804D21D5-0C2A-40BE-A652-528A1E226661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWMIDemo", "EasyWMIDemo\EasyWMIDemo.csproj", "{DF40B6BA-22FF-4B97-AB5F-69D5858C799B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB144993-0032-4F12-9285-82DBD4C558EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB144993-0032-4F12-9285-82DBD4C558EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB144993-0032-4F12-9285-82DBD4C558EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB144993-0032-4F12-9285-82DBD4C558EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804D21D5-0C2A-40BE-A652-528A1E226661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804D21D5-0C2A-40BE-A652-528A1E226661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804D21D5-0C2A-40BE-A652-528A1E226661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804D21D5-0C2A-40BE-A652-528A1E226661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF40B6BA-22FF-4B97-AB5F-69D5858C799B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF40B6BA-22FF-4B97-AB5F-69D5858C799B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF40B6BA-22FF-4B97-AB5F-69D5858C799B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF40B6BA-22FF-4B97-AB5F-69D5858C799B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
