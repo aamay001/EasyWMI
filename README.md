@@ -30,3 +30,4 @@ WMIProcessor wmi = new WMIProcessor(WMI_ALIAS.CPU, "name,threadcount,architectur
 String result = wmi.ExecuteRequest();
 
 ```
+<span stye="color:red; font-weight:bold;">Filter is optional for all cases.</span>
