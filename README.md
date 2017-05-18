@@ -7,7 +7,7 @@ Supported Alias(es) can be found here:
 
 ## Easy Syntax
 
-```markdown
+```c#
 // Request WMI data from a remote machine.
 WMIProcessor wmi = new WMIProcessor();
 wmi.Request = WMI_ALIAS.CPU;
