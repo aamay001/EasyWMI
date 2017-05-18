@@ -137,29 +137,34 @@ namespace EasyWMI
         /// <returns></returns>
         public String ExecuteRequest()
         {
-            _task = GetTask();
-
-            try
+            if (ValidateTask())
             {
-                _task.Start();
+                _task = GetTask();
+
+                try
+                {
+                    _task.Start();
+                }
+
+                catch (ObjectDisposedException e1)
+                {
+                    throw e1;
+                }
+
+                catch (InvalidOperationException e2)
+                {
+                    throw e2;
+                }
+
+                catch (Exception e3)
+                {
+                    throw e3;
+                }
+
+                return GetTaskOutput();
             }
 
-            catch (ObjectDisposedException e1)
-            {
-                throw e1;                
-            }
-
-            catch (InvalidOperationException e2)
-            {
-                throw e2;
-            }            
-
-            catch (Exception e3)
-            {
-                throw e3;
-            }
-
-            return GetTaskOutput();
+            throw new ArgumentException("Argument(s) missing from task. Request property must be specified.");
         }
 
         #region Utility Methods
