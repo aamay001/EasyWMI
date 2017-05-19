@@ -171,22 +171,13 @@ namespace EasyWMI
                 try
                 {
                     _task.Start();
+                    _task.WaitForExit();
                 }
 
-                catch (ObjectDisposedException e1)
-                {
-                    throw e1;
-                }
-
-                catch (InvalidOperationException e2)
-                {
-                    throw e2;
-                }
-
-                catch (Exception e3)
-                {
-                    throw e3;
-                }
+                catch (ObjectDisposedException e) { throw e; }
+                catch (InvalidOperationException e) { throw e; }
+                catch (SystemException e) { throw e; }
+                catch (Exception e) { throw e; }
 
                 return GetTaskOutput();
             }
@@ -281,7 +272,7 @@ namespace EasyWMI
             {
                 sb.Append(sr.ReadToEnd());
             }
-            
+
             return sb.ToString().Trim();              
         }
 
