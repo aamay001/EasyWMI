@@ -25,10 +25,10 @@ DEALINGS IN THE SOFTWARE.
 ** Edit Date		Edited By		Changes
 ** 5/18/2017		Andy Amaya		Inital Version
 *************************************************************************************************************************/
-using System;
-using System.IO;
 using System.Diagnostics;
 using System.Text;
+using System.IO;
+using System;
 
 namespace EasyWMI
 {

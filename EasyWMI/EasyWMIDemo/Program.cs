@@ -1,6 +1,5 @@
 ﻿using EasyWMI;
 using System;
-using System.Collections.Generic;
 
 namespace EasyWMIDemo
 {
@@ -27,7 +26,7 @@ namespace EasyWMIDemo
             // WMIData object with default request + Extra Request.
             WMIData wmiData = new WMIData(true);
             wmiData.GetData(WMI_ALIAS.NETWORK_INTERFACE_CARD_CONFIG, "ipaddress");
-            
+
             foreach ( var currentAlias in wmiData.Properties )
             {
                 Console.WriteLine(currentAlias.Key.Value);

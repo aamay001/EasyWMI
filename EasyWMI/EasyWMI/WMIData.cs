@@ -89,8 +89,7 @@ namespace EasyWMI
         /// <summary>
         /// Executes requests for default wmi data. Default data is: 
         /// 1.) CSPRODUCT name and vendor
-        /// 2.) CPU architecture.
-        /// 3.) OPERATING_SYSTEM caption
+        /// 2.) OPERATING_SYSTEM caption and osarchitecture
         /// </summary>
         public void GetDefault()
         {
@@ -134,7 +133,12 @@ namespace EasyWMI
             {
                 Parallel.ForEach(ParseWMIOutput(wmi.ExecuteRequest()), currentData =>
                 {
-                    _properties[request].Add(currentData.Key, currentData.Value);
+                    // If property for alias already exists, update it.
+                    if (_properties[request].ContainsKey(currentData.Key))
+                        _properties[request][currentData.Key] = currentData.Value;
+
+                    else
+                        _properties[request].Add(currentData.Key, currentData.Value);
                 });                                                                              
             }
 
