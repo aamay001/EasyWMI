@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="WMIProcessorTests.cs" />
+    <Compile Include="EasyWMI\WMIDataTests.cs" />
+    <Compile Include="EasyWMI\WMIProcessorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

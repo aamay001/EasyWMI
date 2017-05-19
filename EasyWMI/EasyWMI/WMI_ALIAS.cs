@@ -23,7 +23,7 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 DEALINGS IN THE SOFTWARE.				 
 
 ** Edit Date		Edited By		Changes
-** 5/17/2017		Andy Amaya		Inital Version
+** 5/18/2017		Andy Amaya		Inital Version
 *************************************************************************************************************************/
 using System;
 
@@ -186,5 +186,6 @@ namespace EasyWMI
         public static Alias TIMEZONE = new Alias( "timezone");
         public static Alias USER_ACCOUNT = new Alias( "useraccount");
         public static Alias MEMORY_CHIP = new Alias( "memorychip");
+        public static Alias CSPRODUCT = new Alias("csproduct");
     }
 }

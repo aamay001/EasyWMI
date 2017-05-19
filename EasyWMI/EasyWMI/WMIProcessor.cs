@@ -23,7 +23,7 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 DEALINGS IN THE SOFTWARE.				 
 
 ** Edit Date		Edited By		Changes
-** 5/17/2017		Andy Amaya		Inital Version
+** 5/18/2017		Andy Amaya		Inital Version
 *************************************************************************************************************************/
 using System;
 using System.IO;
@@ -146,7 +146,7 @@ namespace EasyWMI
         /// parameter.
         /// </summary>
         /// <param name="request">Request parameter should contain the WMI Alias for the data to return. Use WMI_ALIAS class.</param>
-        /// <param name="filter">Filter results with a comma separated list of properties.</param>
+        /// <param name="filter">Filter results with a comma separated list of properties. Empty filter return all data for alias.</param>
         /// <param name="nodeName">Name of remote device to get data for.</param>
         /// <param name="remote">Switch to set execution style. True = Remote Execution | (default)False = Local Execution</param>
         public WMIProcessor( String nodeName, Alias request, String filter = "", bool remote = false )
